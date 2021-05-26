@@ -1,5 +1,7 @@
 # game.py
 
+import random
+
 print("Rock, Paper, Scissors, Shoot!")
 
 user_choice = input("Choose an action 'rock','paper','scissors':")
@@ -18,5 +20,9 @@ else:
     print("OOPS, invalid input.  Please try again.")
     exit()
 
+valid_options = ["rock","paper","scissors"]
+computer_choice = random.choice(valid_options)
+
+print("Computer Chose: ",computer_choice)
 
 print("THIS IS THE END OF OUR GAME.  PLEASE PLAY AGAIN.")
