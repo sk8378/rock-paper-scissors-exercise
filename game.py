@@ -1,16 +1,19 @@
 # game.py
 
 import random
+import os
+
+PLAYER_NAME = os.getenv("PLAYER_NAME", default = "Player One")
 
 print("--------------------------------------------------")
 
-print("Let's Play a Game")
+print(f"Hi {PLAYER_NAME} Let's Play a Game:")
 
 print("Rock, Paper, Scissors, Shoot!")
 
 print("--------------------------------------------------")
 
-user_choice = input("Choose an action 'rock','paper','scissors':")
+user_choice = input("You go first! Choose an action 'rock','paper','scissors':")
 
 #print(user_choice)
 print("You Chose: ", user_choice)
@@ -51,3 +54,8 @@ elif ((computer_choice == "paper") and (user_choice == "rock")):
 elif ((computer_choice == "scissors") and (user_choice == "paper")):
     print("Computer Wins. Try again!")
     exit()
+
+
+print("--------------------------------------------------")
+
+print("Thanks for Playing!")
